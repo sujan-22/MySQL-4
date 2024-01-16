@@ -4,40 +4,50 @@
 
 This repository contains SQL scripts for implementing triggers to update "year to date sales" values in a master table following INSERT, UPDATE, and DELETE operations on a sales table. The master table stores information about customers, items, or description services.
 
-## Triggers
+## Lab Scripts
 
-Three triggers have been implemented:
+### Lab4.txt
 
-- **InsertTrigger.sql:** Trigger for handling INSERT operations on the sales table.
-- **UpdateTrigger.sql:** Trigger for handling UPDATE operations on the sales table.
-- **DeleteTrigger.sql:** Trigger for handling DELETE operations on the sales table.
+Author: Sujan Rokad  
+Date: Oct 3, 2023  
+Authorship statement: I, Sujan Rokad, student number 000882948, certify that this material is my original work. No other person's work has been used without due acknowledgment, and I have not made my work available to anyone else.
 
-### Bonus Feature
+#### Contents:
 
-The triggers are designed to handle one row at a time. A bonus feature includes the ability to handle multiple rows being inserted,
+- Setting NOCOUNT ON suppresses completion messages for each INSERT
+- Set date format to year, month, day
+- Create the mydatabase database
+- Create customers and sales tables
+- Insert customers and sales records
+- Verify inserts
+- Create a view displaying credit_limit higher than average
+
+### Lab7.txt
+
+Author: Sujan Rokad  
+Date: Nov 14, 2023  
+Authorship statement: I, Sujan Rokad, student number 000882948, certify that this material is my original work. No other person's work has been used without due acknowledgment, and I have not made my work available to anyone else.
+
+#### Contents:
+
+- Create INSERT, DELETE, and UPDATE triggers
+- Verification and testing of triggers
 
 ## Usage Instructions
 
-To implement the triggers and verify their functionality, follow these steps:
+To run the scripts, follow these steps:
 
-1. Execute the SQL script containing trigger creation statements. Ensure each trigger is followed by a `GO` statement.
+1. Open SQL Server Management Studio (SSMS) or another SQL database client.
 
-2. Verify Trigger Functionality:
+2. Copy and paste the content of Lab4.txt into a new query window and execute the script.
 
-   ```sql
-   -- Verification
-   PRINT 'Verify triggers'
-   PRINT 'Master Table Before Changes'
-   -- SELECT all rows and columns from the master table
+3. Copy and paste the content of Lab7.txt into a new query window and execute the script.
 
-   -- INSERT a row into the sales table (ensure transaction amount is not zero, pick a large or unusual amount)
-   PRINT 'After INSERT'
-   -- SELECT all rows and columns from the master table
+4. Verify the results by checking the printed messages and querying the necessary tables.
 
-   -- DELETE the row that just got inserted in the sales table
-   PRINT 'After DELETE'
-   -- SELECT all rows and columns from the master table
+## Important Notes
 
-   -- UPDATE the transaction amount in one row in the sales table (ensure transaction amount is not zero, pick a large or unusual amount)
-   PRINT 'After UPDATE'
-   -- SELECT all rows and columns from the master table
+- Ensure that the necessary database (`mydatabase`) is created before executing Lab7.txt.
+- Make sure to execute each script separately.
+
+Feel free to customize these instructions based on your specific setup and requirements.
